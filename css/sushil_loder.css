@@ -1,0 +1,104 @@
+*{
+	margin: 0;padding: 0;
+	box-sizing: border-box;
+}
+.page_loader{
+	height:100vh;width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #042104;
+
+	animation: bg-animation 10s linear infinite ;
+	
+	-ms-animation: bg-animation 10s linear infinite ;
+	-o-animation: bg-animation 10s linear infinite ;
+	-webkit-animation: bg-animation 10s linear infinite ;
+}
+@keyframes bg-animation {
+	from{
+		filter: hue-rotate(0deg);
+	}
+	to{
+		filter: hue-rotate(360deg);
+	}
+}
+
+@-webkit-keyframes bg-animation {
+	from{
+		filter: hue-rotate(0deg);
+	}
+	to{
+		filter: hue-rotate(360deg);
+	}
+}
+@-ms-keyframes bg-animation {
+	from{
+		filter: hue-rotate(0deg);
+	}
+	to{
+		filter: hue-rotate(360deg);
+	}
+}
+@-o-keyframes bg-animation {
+	from{
+		filter: hue-rotate(0deg);
+	}
+	to{
+		filter: hue-rotate(360deg);
+	}
+}
+
+.loader{
+	position: relative;
+	height: 120px;width: 120px;
+}
+.loader span{
+	position: absolute;
+	top: 0;left: 0;
+	height: 100%;width: 100%;
+	transform: rotate(calc(18deg * var(--i)));
+}
+.loader span::before{
+	content: "";
+	position: absolute;
+	top: 0;left: 0;
+	height: 15px;width: 15px;
+	background-color: #00ff0a;
+	border-radius: 50%;
+	box-shadow: 0 0 10px #00ff0a,0 0 20px #00ff0a,0 0 40px #00ff0a,0 0 60px #00ff0a,0 0 80px #00ff0a,0 0 100px #00ff0a;
+	animation: animation 2s calc(0.1s * var(--i)) linear infinite ;
+	-o-animation:  animation 2s calc(0.1s * var(--i)) linear infinite;
+	-ms-animation: animation 2s calc(0.1s * var(--i)) linear infinite ;
+	-webkit-animation: animation 2s calc(0.1s * var(--i)) linear infinite ;
+	
+}
+@keyframes animation {
+	0%{
+		transform: scale(1);
+	}80%,100%{
+		transform: scale(0);
+	}
+}
+
+@-webkit-keyframes animation {
+	0%{
+		transform: scale(1);
+	}80%,100%{
+		transform: scale(0);
+	}
+}
+@-ms-keyframes animation {
+	0%{
+		transform: scale(1);
+	}80%,100%{
+		transform: scale(0);
+	}
+}
+@-o-keyframes animation {
+	0%{
+		transform: scale(1);
+	}80%,100%{
+		transform: scale(0);
+	}
+}
